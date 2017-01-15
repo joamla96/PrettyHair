@@ -36,5 +36,9 @@ namespace Core {
 		public Customer Get(int id) {
 			return Customers[id];
 		}
+
+		public List<Customer> GetAll() {
+
+		}
 	}
 }
