@@ -38,7 +38,7 @@ namespace Core {
 		}
 
 		public List<Customer> GetAll() {
-
+			return Customers.Values.ToList<Customer>();
 		}
 	}
 }
