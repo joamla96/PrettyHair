@@ -10,6 +10,14 @@ namespace Core {
 			return LatestCustomer + 1;
 		}
 
+		public Customer Get(int id) {
+			return Customers[id];
+		}
+
+		public List<Customer> GetAll() {
+			return Customers.Values.ToList<Customer>();
+		}
+
 		public int CreateNewCustomer(string name, string email, int houseno, string streetname, string city, int zipcode) {
 			Address Addr = new Address(houseno, streetname, zipcode, city);
 			Customer Customer = new Customer(this.NextID(), name, Addr, email);
@@ -33,12 +41,5 @@ namespace Core {
 			return true;
 		}
 
-		public Customer Get(int id) {
-			return Customers[id];
-		}
-
-		public List<Customer> GetAll() {
-			return Customers.Values.ToList<Customer>();
-		}
 	}
 }
