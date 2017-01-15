@@ -44,11 +44,16 @@
     <Compile Include="CustomerTests.cs" />
     <Compile Include="OrderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidatorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{3d2a3e08-bd25-409d-9986-51d262927437}</Project>
       <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserInterface_CLI\UI.CLI.csproj">
+      <Project>{0cb61215-b32c-47c8-bb4c-b72294888556}</Project>
+      <Name>UI.CLI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
