@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>170</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>CustomerRepository
+--
+ID: Int
+--
+Customer getCustomer(ID)
+bool checkCustomer(ID)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>170</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+ID: Int
+Name: String
+Address: String
+--
+Customer(ID, Name, Address)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>170</y>
+      <w>340</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+OrderDate: Datetime
+DeliveryDate: Datetime
+Warenumber: Int
+Quantity: Int
+--
+Order(OrderDate, DeliveryDate, ProductID, Quant)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1190</x>
+      <y>170</y>
+      <w>100</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Product
+--
+ID: Int
+--
+Product(ID)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>200</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=0..1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>210</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>190</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1..n
+</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+</diagram>

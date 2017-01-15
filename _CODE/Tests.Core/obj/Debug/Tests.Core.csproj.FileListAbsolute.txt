@@ -1,0 +1,8 @@
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Tests.Core\bin\Debug\Tests.Core.dll
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Tests.Core\bin\Debug\Tests.Core.pdb
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Tests.Core\bin\Debug\Core.dll
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Tests.Core\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Tests.Core\bin\Debug\Core.pdb
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Tests.Core\obj\Debug\Tests.Core.csprojResolveAssemblyReference.cache
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Tests.Core\obj\Debug\Tests.Core.dll
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Tests.Core\obj\Debug\Tests.Core.pdb

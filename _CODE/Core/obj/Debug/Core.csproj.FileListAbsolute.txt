@@ -1,0 +1,10 @@
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Core\bin\Debug\Core.dll
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Core\bin\Debug\Core.pdb
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Core\obj\Debug\Core.dll
+D:\OneDrive\EAL\OneDrive for Business\Class\Programming\PrettyHair\_CODE\PrettyHair\Core\obj\Debug\Core.pdb
+F:\Documents\GitHub\Class\Programming\PrettyHair\_CODE\PrettyHair\Core\bin\Debug\Core.dll
+F:\Documents\GitHub\Class\Programming\PrettyHair\_CODE\PrettyHair\Core\bin\Debug\Core.pdb
+F:\Documents\GitHub\Class\Programming\PrettyHair\_CODE\PrettyHair\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+F:\Documents\GitHub\Class\Programming\PrettyHair\_CODE\PrettyHair\Core\obj\Debug\Core.dll
+F:\Documents\GitHub\Class\Programming\PrettyHair\_CODE\PrettyHair\Core\obj\Debug\Core.pdb
