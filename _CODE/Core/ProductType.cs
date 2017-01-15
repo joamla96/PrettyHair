@@ -11,6 +11,16 @@ namespace Core {
 		public double Price { get; set; }
 		public int Amount { get; set; }
 
+		public ProductType() {
+
+		}
+		public ProductType(int ID, string Desc, double Price, int Amount) {
+			this.ID = ID;
+			this.Description = Desc;
+			this.Price = Price;
+			this.Amount = Amount;
+		}
+
 		public void SetPrice(double newPrice) {
 			this.Price = newPrice;
 		}

@@ -5,9 +5,9 @@ using System.Linq;
 namespace Core {
 	public class CustomerRepository {
 		private Dictionary<int, Customer> Customers = new Dictionary<int, Customer>();
+		int IDcounter = 0;
 		public int NextID() {
-			int LatestCustomer = Customers.Keys.Last();
-			return LatestCustomer + 1;
+			return ++IDcounter;
 		}
 
 		public Customer Get(int id) {
@@ -15,7 +15,7 @@ namespace Core {
 		}
 
 		public List<Customer> GetAll() {
-			return Customers.Values.ToList<Customer>();
+			return Customers.Values.ToList();
 		}
 
 		public int CreateNewCustomer(string name, string email, int houseno, string streetname, string city, int zipcode) {
@@ -27,7 +27,7 @@ namespace Core {
 			return Customer.ID;
 		}
 
-		public void Add(Customer customer) {
+		private void Add(Customer customer) {
 			Customers.Add(customer.ID, customer);
 		}
 

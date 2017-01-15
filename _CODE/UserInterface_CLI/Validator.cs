@@ -20,7 +20,8 @@ namespace UserInterface_CLI {
 		}
 
 		public bool email(string input) {
-			return Regex.IsMatch(input, @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}");
+			//return Regex.IsMatch(input, @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}");
+			return true;
 		}
 
 		internal bool yesno(string input) {

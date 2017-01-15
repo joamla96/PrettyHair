@@ -2,8 +2,13 @@
 using Core;
 
 namespace UserInterface_CLI {
-	internal class Program {
-		ProductTypeRepository RepoPT = new ProductTypeRepository();
+	public class Program {
+		public CustomerRepository RepoCus = new CustomerRepository();
+		public OrderRepository RepoOdr = new OrderRepository();
+		public ProductTypeRepository RepoPT = new ProductTypeRepository();
+
+		public CustomerManager CM;
+		public OrderManager OM;
 		static void Main(string[] args) {
 			Program a = new Program();
 			a.Init();
@@ -24,16 +29,22 @@ namespace UserInterface_CLI {
 			RepoPT.Add(A);
 			RepoPT.Add(B);
 			RepoPT.Add(C);
-	}
+
+			RepoCus.CreateNewCustomer("John Doe", "jodoe@example.com", 28, "Fakestreet", "Papertown", 5880);
+			RepoCus.CreateNewCustomer("Jane Doe", "jadoe@example.com", 30, "Fakestreet", "Papertown", 5881);
+		}
 
 		private void Run() {
-			CustomerManager CM = new CustomerManager();
+			CM = new CustomerManager();
+			OM = new OrderManager();
+
 			bool running = true;
 			while (running) {
 				Console.Clear();
 				Console.WriteLine("1. List all Product Types");
 				Console.WriteLine("2. Update a Product");
 				Console.WriteLine("3. Access Customer Manager");
+				Console.WriteLine("4. Access Order Manager");
 
 				Console.WriteLine("\n0. Exit");
 				string Menu = GetInput("number");
@@ -55,7 +66,11 @@ namespace UserInterface_CLI {
 						break;
 
 					case "3":
-						CM.CustomerMenu();
+						CM.CustomerMenu(this);
+						break;
+
+					case "4":
+						OM.OrderMenu(this);
 						break;
 				}
 			}

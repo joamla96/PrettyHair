@@ -4,16 +4,16 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests.Core {
 	[TestClass]
-	class CustomerManager {
+	public class CustomerTests {
 		CustomerRepository RepoCus;
 
 		[TestInitialize]
-		void InitCustomerTest() {
+		public void InitCustomerTest() {
 			RepoCus = new CustomerRepository();
 		}
 
 		[TestMethod]
-		void CreateCustomer() {
+		public void CreateCustomer() {
 			int ID = RepoCus.CreateNewCustomer("John Doe", "jdoe@example.com", 20, "Fakestreet", "Faketown", 5000);
 
 			Customer Customer = RepoCus.Get(ID);
@@ -23,27 +23,17 @@ namespace Tests.Core {
 		}
 
 		[TestMethod]
-		void CheckNextID() {
-			// First NextID should be 1
+		public void CheckNextID() {
 			Assert.AreEqual(1, RepoCus.NextID());
-
-			RepoCus.CreateNewCustomer("John Doe", "jdoe@example.com", 20, "Fakestreet", "Faketown", 5000);
 			Assert.AreEqual(2, RepoCus.NextID());
 		}
 
 		[TestMethod]
-		void AddCustomer() {
-			throw new NotImplementedException();
-		}
+		public void CustomerExists() {
+			int ID = RepoCus.CreateNewCustomer("John Doe", "jdoe@example.com", 20, "Fakestreet", "Faketown", 5000);
 
-		[TestMethod]
-		void CustomerExists() {
-			throw new NotImplementedException();
-		}
-
-		[TestMethod]
-		void GetCustomer() {
-			throw new NotImplementedException();
+			Assert.IsTrue(RepoCus.Exists(ID));
+			Assert.IsFalse(RepoCus.Exists(555));
 		}
 	}
 }

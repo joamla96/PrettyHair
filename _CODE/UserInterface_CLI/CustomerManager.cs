@@ -1,12 +1,16 @@
 ﻿using Core;
 using System;
+using System.Collections.Generic;
 
 namespace UserInterface_CLI {
 	public class CustomerManager {
-		Program Program = new Program();
+		Program Program;
+		CustomerRepository CustomerRepo;
 
-		CustomerRepository CustomerRepo = new CustomerRepository();
-		public void CustomerMenu() {
+		public void CustomerMenu(Program program) {
+			this.Program = program;
+			CustomerRepo = Program.RepoCus;
+
 			bool Running = true;
 
 			while (Running) {
@@ -15,6 +19,7 @@ namespace UserInterface_CLI {
 				Console.WriteLine("1. Create New Customer");
 				Console.WriteLine("2. Update Customer Information");
 				Console.WriteLine("3. Delete Customer");
+				Console.WriteLine("4. List All Customers");
 
 				Console.WriteLine("\n0. Back to Main Menu");
 
@@ -34,8 +39,30 @@ namespace UserInterface_CLI {
 					case "3":
 						DeleteCustomer();
 						break;
+
+					case "4":
+						ListCustomers();
+						break;
 				}
 			}
+		}
+
+		private void ListCustomers() {
+			Console.Clear();
+			List<Customer> Customers = CustomerRepo.GetAll();
+
+			if (Customers.Count == 0) {
+				Console.WriteLine("No Customers Exists");
+			} else {
+
+				foreach (Customer C in Customers) {
+					Console.WriteLine(C.ToString());
+				}
+
+			}
+
+			Console.ReadKey();
+
 		}
 
 		private void DeleteCustomer() {
@@ -72,7 +99,12 @@ namespace UserInterface_CLI {
 			Console.Write("\nEmail: ");
 			string Email = Program.GetInput("email");
 
-			return CustomerRepo.CreateNewCustomer(FirstName + " " + LastName, Email, HouseNo, Streetname, City, ZipCode);
+			int CustomerID = CustomerRepo.CreateNewCustomer(FirstName + " " + LastName, Email, HouseNo, Streetname, City, ZipCode);
+
+			Console.WriteLine("\nCustomer was created successfully...");
+			Console.ReadKey();
+
+			return CustomerID;
 		}
 	}
 }

@@ -3,17 +3,26 @@ using System;
 
 namespace UserInterface_CLI {
 	public class OrderManager {
-		Program Program = new Program();
-		CustomerManager CM = new CustomerManager();
+		Program Program;
+		CustomerManager CM;
 
-		CustomerRepository RepoCus = new CustomerRepository();
-		OrderRepository RepoOdr = new OrderRepository();
-		ProductTypeRepository RepoPT = new ProductTypeRepository();
+		CustomerRepository RepoCus;
+		OrderRepository RepoOdr;
+		ProductTypeRepository RepoPT;
+		public void OrderMenu(Program program) {
+			this.Program = program;
 
-		public void OrderMenu() {
+			CM = Program.CM;
+			RepoCus = Program.RepoCus;
+			RepoOdr = Program.RepoOdr;
+			RepoPT = Program.RepoPT;
+
 			bool Running = true;
 
 			while (Running) {
+				Console.Clear();
+				Console.WriteLine("Order Management System\n");
+
 				Console.WriteLine("1. Create New Order");
 				Console.WriteLine("x2. Delete Order");
 				Console.WriteLine("x3. List Order");
@@ -49,7 +58,8 @@ namespace UserInterface_CLI {
 		}
 
 		private void CreateNewOrder() {
-			Console.Write("Type Customer ID:");
+			Console.Clear();
+			Console.Write("Type Customer ID: ");
 			int CustomerID = int.Parse(Program.GetInput("number"));
 
 			if(!RepoCus.Exists(CustomerID)) {

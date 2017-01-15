@@ -5,10 +5,9 @@ using System.Linq;
 namespace Core {
 	public class OrderRepository {
 		private Dictionary<int, Order> Orders = new Dictionary<int, Order>();
-
+		int IDcounter = 0;
 		public int NextID() {
-			int Latest = Orders.Keys.Last();
-			return Latest + 1;
+			return ++IDcounter;
 		}
 
 		public void Add(Order order) {
@@ -23,5 +22,9 @@ namespace Core {
 			Order Order = new Order(this.NextID(), orderDate, deliveryDate, customer);
 			return Order;
 		}
+
+		public List<Order> GetAll() {
+			return Orders.Values.ToList();
+		} 
 	}
 }
