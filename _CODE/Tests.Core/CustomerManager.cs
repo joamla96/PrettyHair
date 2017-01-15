@@ -33,17 +33,17 @@ namespace Tests.Core {
 
 		[TestMethod]
 		void AddCustomer() {
-
+			throw new NotImplementedException();
 		}
 
 		[TestMethod]
 		void CustomerExists() {
-
+			throw new NotImplementedException();
 		}
 
 		[TestMethod]
 		void GetCustomer() {
-
+			throw new NotImplementedException();
 		}
 	}
 }
