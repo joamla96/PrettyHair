@@ -19,13 +19,18 @@ namespace UserInterface_CLI {
 			return Regex.IsMatch(input, @"(+||00)\d{10}");
 		}
 
-		public bool email(string input) {
+		public bool email(string input) { //TODO
 			//return Regex.IsMatch(input, @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}");
 			return true;
 		}
 
 		internal bool yesno(string input) {
 			return true; //TODO
+		}
+
+		internal bool date(string input) {
+			DateTime Result;
+			return DateTime.TryParse(input, out Result);
 		}
 	}
 }
