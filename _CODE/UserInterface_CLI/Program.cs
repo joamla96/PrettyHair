@@ -165,6 +165,8 @@ namespace UserInterface_CLI {
 
 				case "date":
 					if (!Valid.date(Input)) return GetInput(rule, "Please enter valid date (dd/mm/yyyy)");
+					break;
+
 				default:
 					// If a rule is set, but doesent exists, expect the programmer wanted to validate
 					// but forgot to make a rule set for it...
