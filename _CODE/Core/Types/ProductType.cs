@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Core {
 	public class ProductType {
-		public int ID { get; set; }
 		public string Description { get; set; }
 		public double Price { get; set; }
 		public int Amount { get; set; }
@@ -14,8 +13,7 @@ namespace Core {
 		public ProductType() {
 
 		}
-		public ProductType(int ID, string Desc, double Price, int Amount) {
-			this.ID = ID;
+		public ProductType(string Desc, double Price, int Amount) {
 			this.Description = Desc;
 			this.Price = Price;
 			this.Amount = Amount;
@@ -36,7 +34,6 @@ namespace Core {
 		public override string ToString() {
 			StringBuilder SB = new StringBuilder();
 			SB.AppendLine(this.Description);
-			SB.AppendLine("ID: " + this.ID);
 			SB.AppendLine("Amount: " + this.Amount);
 			SB.AppendLine("Price: " + this.Price);
 

@@ -40,14 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="CustomerRepository.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="OrderLine.cs" />
-    <Compile Include="OrderRepository.cs" />
-    <Compile Include="ProductType.cs" />
-    <Compile Include="ProductTypeRepository.cs" />
+    <Compile Include="Other\Address.cs" />
+    <Compile Include="Types\Customer.cs" />
+    <Compile Include="Repos\CustomerRepository.cs" />
+    <Compile Include="Types\Order.cs" />
+    <Compile Include="Types\OrderLine.cs" />
+    <Compile Include="Repos\OrderRepository.cs" />
+    <Compile Include="Types\ProductType.cs" />
+    <Compile Include="Repos\ProductTypeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

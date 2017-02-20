@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Core {
 	public class ProductTypeRepository {
-		private Dictionary<int, ProductType> Repository = new Dictionary<int, ProductType>();
+		private ICollection<ProductType> Repository = new List<ProductType>();
 		// TODO: Update Diagram ^^
 		public bool AdjustPrice(ProductType productType, double price) {	
 			productType.SetPrice(price);
@@ -21,15 +21,11 @@ namespace Core {
 		}
 
 		public List<ProductType> GetProductTypes() {
-			return Repository.Values.ToList();
-		}
-
-		public ProductType GetProduct(int ID) {
-			return Repository[ID];
+			return (List<ProductType>)Repository;
 		}
 
 		public void Add(ProductType P) {
-			Repository.Add(P.ID, P);
+			Repository.Add(P);
 		}
 
 
