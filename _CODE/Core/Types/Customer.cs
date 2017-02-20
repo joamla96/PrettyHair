@@ -6,7 +6,7 @@ namespace Core {
 		public int ID { get; set; }
 		public string Name { get; set; }
 		public Address Address { get; set; }
-		public String Email { get; set; }
+		public string Email { get; set; }
 
 		public Customer(int id, string name, Address address, string email) {
 			this.ID = id;
