@@ -3,10 +3,6 @@ using System.Collections.Generic;
 namespace Core {
 	public class CustomerRepository {
 		private ICollection<Customer> Customers = new List<Customer>();
-		int IDcounter = 0;
-		public int NextID() {
-			return ++IDcounter;
-		}
 
 		public List<Customer> GetAll() {
 			return (List<Customer>)Customers;
